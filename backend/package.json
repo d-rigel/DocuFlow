@@ -26,10 +26,13 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@strapi/typescript-utils": "^5.40.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.19.37",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=20.0.0 <=24.x.x",
