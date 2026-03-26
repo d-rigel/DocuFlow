@@ -151,7 +151,7 @@ export default {
 
   // -------------------------------------------------------------------------
   // POST /api/documents/:id/share
-  // Add a collaborator by email. Owner only.
+  // Add a collaborator by email. Owner only...
   // -------------------------------------------------------------------------
   async share(ctx: any) {
     const strapi: Core.Strapi = (globalThis as any).strapi;
