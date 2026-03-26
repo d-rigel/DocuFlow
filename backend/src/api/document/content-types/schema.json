@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Document",
+    "description": "Collaborative document with rich text content and whiteboard"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "default": "Untitled Document"
+    },
+    "content": {
+      "type": "text",
+      "default": ""
+    },
+    "whiteboardJson": {
+      "type": "text",
+      "default": ""
+    },
+    "version": {
+      "type": "integer",
+      "default": 1
+    },
+    "lastSavedAt": {
+      "type": "datetime"
+    },
+    "isPublic": {
+      "type": "boolean",
+      "default": false
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "collaborators": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "tags": {
+      "type": "json",
+      "default": []
+    }
+  }
+}
